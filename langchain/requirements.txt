@@ -1,0 +1,5 @@
+langchain_google_genai
+langchain_pinecone
+pinecone~=5.0.0
+langchain_core
+python-dotenv~=1.0.1
