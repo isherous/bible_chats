@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 const kEmptyWidget = SizedBox();
 
 ///Width
+const kWidth4 = SizedBox(width: 4);
 const kWidth8 = SizedBox(width: 8);
 const kWidth12 = SizedBox(width: 12);
 const kWidth16 = SizedBox(width: 16);

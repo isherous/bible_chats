@@ -3,9 +3,11 @@ import 'package:bible_chat/Global/styles.dart';
 import 'package:flutter/material.dart';
 
 class SearchBox extends StatelessWidget {
-  const SearchBox({super.key, required this.controller});
+  const SearchBox(
+      {super.key, required this.controller, required this.focusNode});
 
   final TextEditingController controller;
+  final FocusNode focusNode;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +24,9 @@ class SearchBox extends StatelessWidget {
         ),
         child: Center(
           child: TextField(
+            focusNode: focusNode,
             controller: controller,
+            maxLines: null,
             style: k15Medium,
             decoration: InputDecoration.collapsed(
               hintText: "Ask a question",

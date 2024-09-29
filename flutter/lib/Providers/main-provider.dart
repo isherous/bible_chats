@@ -26,4 +26,16 @@ class MainProvider extends ChangeNotifier {
     answer = ans;
     notifyListeners();
   }
+
+  List kSuggestions = [
+    "How do you seek first the kingdom of God?",
+    "Is Believing Jesus Is God Essential for Salvation?",
+    "Did God really flood the entire earth?",
+    "Why did Satan rebel against God?",
+    "Why did Giants eat people?",
+  ];
+
+  void removeSuggestFromList(String suggestion) {
+    kSuggestions.remove(suggestion);
+  }
 }
