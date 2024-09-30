@@ -48,6 +48,8 @@ dependencies:
   cloud_firestore: ^5.4.0
 
   google_fonts: ^6.2.1
+  flutter_native_splash: ^2.4.1
+
 
 dev_dependencies:
   flutter_test:
@@ -62,6 +64,10 @@ dev_dependencies:
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
+
+flutter_native_splash:
+  image: assets/images/cross-big.png
+  color: "#616A69"
 
 # The following section is specific to Flutter packages.
 flutter:
