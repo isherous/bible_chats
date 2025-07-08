@@ -42,11 +42,11 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 
-#ENV
-*.env
-/lib/Global/constants.dart
-
-#Firebase
-firebase.json
-lib/firebase_options.dart
-android/app/google-services.json
+##ENV
+#*.env
+#/lib/Global/constants.dart
+#
+##Firebase
+#firebase.json
+#lib/firebase_options.dart
+#android/app/google-services.json
