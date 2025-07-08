@@ -13,6 +13,7 @@ class SearchServices {
   Future<String> fullSearch({
     required String query,
     bool isSuggestion = false,
+    required Function stopProgressFunction,
   }) async {
     String answer = "";
 
@@ -29,6 +30,8 @@ class SearchServices {
         answer: answer,
         isSuggestion: isSuggestion,
       );
+
+      stopProgressFunction();
 
       return answer;
     }
@@ -47,6 +50,8 @@ class SearchServices {
         answer: answer,
         isSuggestion: isSuggestion,
       );
+
+      stopProgressFunction();
 
       return answer;
     }
@@ -69,7 +74,7 @@ class SearchServices {
         answer: answer,
         isSuggestion: isSuggestion,
       );
-
+      stopProgressFunction();
       return answer;
     }
 

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "323883760267",
+    "project_id": "bible-chats",
+    "storage_bucket": "bible-chats.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:323883760267:android:5a20ca64ff91a8aee5728e",
+        "android_client_info": {
+          "package_name": "com.assistine.bible_chat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdaLJR06BLPZQ1F-khXaGF5byhU6PFrQs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
