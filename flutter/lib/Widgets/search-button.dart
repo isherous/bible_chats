@@ -28,7 +28,10 @@ class SearchButton extends StatelessWidget {
         }
         controller.clear();
         mainProvider.changeShowProgress(true);
-        String answer = await _searchServices.fullSearch(query: query);
+        String answer = await _searchServices.fullSearch(
+          query: query,
+          stopProgressFunction: () => mainProvider.changeShowProgress(false),
+        );
         mainProvider.changeShowProgress(false);
         mainProvider.changeAnswer(answer);
       },

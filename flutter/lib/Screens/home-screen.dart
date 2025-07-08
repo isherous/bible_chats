@@ -88,7 +88,10 @@ class _HomeState extends State<Home> {
     print("Start");
     controller.clear();
     mainProvider.changeShowProgress(true);
-    String answer = await _searchServices.fullSearch(query: query);
+    String answer = await _searchServices.fullSearch(
+      query: query,
+      stopProgressFunction: () => mainProvider.changeShowProgress(false),
+    );
     mainProvider.changeShowProgress(false);
     mainProvider.changeAnswer(answer);
   }
@@ -278,6 +281,7 @@ class _SingleSuggestion extends StatelessWidget {
         String answer = await _searchServices.fullSearch(
           query: question,
           isSuggestion: true,
+          stopProgressFunction: () => mainProvider.changeShowProgress(false),
         );
         mainProvider.changeShowProgress(false);
         mainProvider.changeAnswer(answer);
@@ -285,7 +289,7 @@ class _SingleSuggestion extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
         decoration: BoxDecoration(
-          color: kWhite.withOpacity(0.1),
+          color: kWhite.withValues(alpha: 0.1),
           borderRadius: BorderRadius.circular(8),
         ),
         child: Center(
